@@ -8,16 +8,54 @@ body{
     height: 100vh;
 }
 .logo-section{
-    border: 1px black solid;
     background-image: url(images/background_asafyrov_unsplash.jpg);
     width: 30vw;
 }
 .form-section{
     display: flex;
     flex-direction: column;
-    border: 1px black solid;
     width: 70vw;
     justify-content: center;
+    background-color: rgba(235, 228, 228, 0.421);
+}
+.signup-form{
+    background-color:  rgb(255, 255, 255);
+    box-shadow: 0px 3px 4px rgba(0,0,0,0.2);
+    padding: 2.5rem;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    color: rgb(86, 86, 86);
+}
+.signup-form>form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    width: 100%;
+}
+.signup-form>p{
+    padding: 0;
+    margin: 0;
+    padding-bottom: 1rem;
+    color: black;
+    font-size: 1rem;
+}
+
+.form-row{
+    display: flex;
+    justify-content: space-between;
+    width: 65%;
+    flex-wrap: wrap;
+}
+
+entry{
+   display: flex;
+   flex-direction: column; 
+   width: 230px;
+}
+input{
+    height: 1.4rem;
+    border-radius: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.638);
 }
 header>p{
     font-size: 1.4rem;
