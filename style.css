@@ -55,7 +55,15 @@ entry{
 input{
     height: 1.4rem;
     border-radius: 5px;
-    border: 1px solid rgba(128, 128, 128, 0.638);
+    border: 1.5px solid rgba(128, 128, 128, 0.452);
+}
+input:focus{
+    border: 1.5px solid rgb(88, 152, 255);
+    outline: none;
+    box-shadow: 1px 1px 4px rgb(47, 47, 47);
+}
+header{
+    padding: 2.5rem;
 }
 header>p{
     font-size: 1.4rem;
