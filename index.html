@@ -4,20 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
     <link rel="stylesheet" href="style.css">
     <title>Sign-Up Page</title>
 </head>
 <body>
-    <header>
-        <p>This is not a real online service! You know you need sometthing
-        like this in your life to help you realize your deepest dreams! Sign
-        up <em>now</em> to get started.</p>
+    <div class="logo-section">
+        <p>Logo Goes Here</p>
+    </div>
+
+
+    <div class="form-section">
+        <header>
+            <p>This is not a real online service! You know you need sometthing
+            like this in your life to help you realize your deepest dreams! Sign
+            up <em>now</em> to get started.</p>
         
-        <p>You <em>know</em> you want to.</p>
-    </header>
-    
-    <div class="signup-form">
+            <p>You <em>know</em> you want to.</p>
+        </header>
         
+        <div class="signup-form">
+            <p>Let's do this!</p>
+            <form action="" method="get">
+                <div class="form-row">
+                    <label for="first_name">First Name</label>
+                    <input type="text" id="first_name" name="first_name" required>
+                    <label for="last_name">Last Name</label>
+                    <input type="text" id="last_name" name="last_name" required>
+                </div>
+                <div class="form-row">
+                    <label for="email">E-Mail</label>
+                    <input type="email" name="email" id="email" required>
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" name="phone" id="phone" required>
+                </div>
+                <div class="form-row">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" required>
+                    <label for="conf-password">Confirm Password</label>
+                    <input type="password" name="conf-password" id="conf-password" required>
+                </div>
+                <button type="submit" class="form-row">Create Account</button>
+            </form>
+        </div>
     </div>
 
 </body>
