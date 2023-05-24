@@ -15,7 +15,7 @@ body{
     display: flex;
     flex-direction: column;
     width: 70vw;
-    justify-content: center;
+    justify-content: start;
     background-color: rgba(235, 228, 228, 0.421);
 }
 .signup-form{
@@ -62,9 +62,30 @@ input:focus{
     outline: none;
     box-shadow: 1px 1px 4px rgb(47, 47, 47);
 }
+.error{
+    outline: none;
+    border: 1.5px solid red;
+}
+.after-text{
+    color: red;
+    text-transform: none;
+    padding-top: 0.2em;
+    
+}
+.after-text::after{
+    content: "*Passwords do not match";
+}
+button{
+    margin: 2.5rem;
+}
 header{
     padding: 2.5rem;
 }
 header>p{
     font-size: 1.4rem;
+}
+.signup-form>p{
+    text-transform: none;
+    font-size: 1.4rem;
+
 }
