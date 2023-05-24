@@ -1,4 +1,4 @@
-:root{
+  :root{
     font-family: "Rubik", serif;
 }
 body{
@@ -66,6 +66,7 @@ input{
     border-radius: 5px;
     border: 1.5px solid rgba(128, 128, 128, 0.452);
 }
+
 input:focus{
     border: 1.5px solid rgb(88, 152, 255);
     outline: none;
@@ -75,11 +76,13 @@ input:focus{
     outline: none;
     border: 1.5px solid red;
 }
+.error:focus{
+    border: 1.5px solid red;
+}
 .after-text{
     color: red;
     text-transform: none;
     padding-top: 0.2em;
-    
 }
 .after-text::after{
     content: "*Passwords do not match";
@@ -137,4 +140,13 @@ header>:nth-child(2){
 img{
     height: auto;
     width: 25%;
+}
+
+.required-text{
+    color: red;
+    text-transform: none;
+    padding-top: 0.2em;
+}
+.required-text::after{
+    content: "*This is required";
 }

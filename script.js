@@ -7,12 +7,36 @@ function comparePassword(){
         afterText.classList.remove("after-text");
         password.classList.remove("error");
         confPassword.classList.remove("error");
+
+        password.setCustomValidity("");
     }else{
         afterText.classList.add("after-text");
         password.classList.add("error");
         confPassword.classList.add("error");
+        
+        password.setCustomValidity("Passwords don't match");
     }
 }
 
 password.addEventListener("input", comparePassword);
 confPassword.addEventListener("input", comparePassword);
+
+
+
+
+//To check if input fields are invalid and then change border to red
+const inputFields = document.querySelectorAll('input');
+
+inputFields.forEach(function(inputField) {
+  inputField.addEventListener('invalid', function(event) {
+    event.preventDefault();
+    inputField.classList.add('error');
+  });
+});
+
+inputFields.forEach(function(inputField){
+    inputField.addEventListener('input', function(){
+        inputField.classList.remove('error');
+    });
+});
+

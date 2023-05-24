@@ -13,7 +13,7 @@
     <div class="logo-section">
         <div class="logo-strip">
             <img src="images/odin-logo.png" alt="logo">
-            <span>ODIN</span>
+            <span id="logotext">ODIN</span>
         </div>
     </div>
 
@@ -34,21 +34,25 @@
                 <div class="form-row">
                     <entry>
                         <label for="first_name">First Name</label>
-                        <input type="text" id="first_name" name="first_name" required>
+                        <input type="text" id="first_name" name="first_name" maxlength="50" required>
+                        <span></span>
                     </entry>
                     <entry>
                         <label for="last_name">Last Name</label>
-                        <input type="text" id="last_name" name="last_name" required>
+                        <input type="text" id="last_name" name="last_name" maxlength="50" required>
+                        <span></span>
                     </entry>
                 </div>
                 <div class="form-row">
                     <entry>
                         <label for="email">E-Mail</label>
                         <input type="email" name="email" id="email" required>
+                        <span></span>
                     </entry>
                     <entry>
                         <label for="phone">Phone Number</label>
-                        <input type="tel" name="phone" id="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+                        <input type="tel" name="phone" id="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+                        <span></span>
                     </entry>
                 </div>
                 <div class="form-row">
