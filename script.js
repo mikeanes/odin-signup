@@ -1,6 +1,7 @@
 const password = document.getElementById('password');
 const confPassword = document.getElementById('conf-password');
 const afterText = document.getElementById('after-text');
+const errorMessage = document.getElementById('error-message');
 
 function comparePassword(){
     if(password.value === confPassword.value){
@@ -31,8 +32,10 @@ inputFields.forEach(function(inputField) {
   inputField.addEventListener('invalid', function(event) {
     event.preventDefault();
     inputField.classList.add('error');
+    errorMessage.classList.add('required-text');
   });
 });
+
 
 inputFields.forEach(function(inputField){
     inputField.addEventListener('input', function(){
@@ -44,3 +47,23 @@ inputFields.forEach(function(inputField){
     });
 });
 
+
+
+function checkFormValidity() {
+    const inputs = document.querySelectorAll('input[required]');
+  
+    for (let i = 0; i < inputs.length; i++) {
+      if (inputs[i].classList.contains('error')) {
+        return; // Return early if any input has the error class
+      }
+    }
+  
+    errorMessage.classList.remove('required-text');
+  }
+  
+  // Attach input event listener to each input field
+  const inputs = document.querySelectorAll('input[required]');
+  inputs.forEach(function(input) {
+    input.addEventListener('input', checkFormValidity);
+  });
+  

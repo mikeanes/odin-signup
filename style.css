@@ -148,5 +148,5 @@ img{
     padding-top: 0.2em;
 }
 .required-text::after{
-    content: "*This is required";
+    content: "*Please fill out the required boxes in red";
 }
