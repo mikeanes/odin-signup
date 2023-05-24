@@ -48,18 +48,18 @@
                     </entry>
                     <entry>
                         <label for="phone">Phone Number</label>
-                        <input type="tel" name="phone" id="phone" required>
+                        <input type="tel" name="phone" id="phone" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
                     </entry>
                 </div>
                 <div class="form-row">
                     <entry>
                         <label for="password">Password</label>
-                        <input type="password" name="password" id="password" class="error" required>
-                        <span class="after-text"></span>
+                        <input type="password" name="password" id="password" required>
+                        <span id="after-text"></span>
                     </entry>
                     <entry>
                         <label for="conf-password">Confirm Password</label>
-                        <input type="password" name="conf-password" id="conf-password" class="error" required>
+                        <input type="password" name="conf-password" id="conf-password" required>
                     </entry>
                 </div>
                 
@@ -73,4 +73,5 @@
     </div>
 
 </body>
+<script src="script.js"></script>
 </html>
