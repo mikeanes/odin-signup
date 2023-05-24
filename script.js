@@ -36,7 +36,11 @@ inputFields.forEach(function(inputField) {
 
 inputFields.forEach(function(inputField){
     inputField.addEventListener('input', function(){
+        if(inputField.id === 'password' || inputField.id === 'conf-password'){
+            return;
+        }else{
         inputField.classList.remove('error');
+        }
     });
 });
 
