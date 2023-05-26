@@ -2,6 +2,7 @@ const password = document.getElementById('password');
 const confPassword = document.getElementById('conf-password');
 const afterText = document.getElementById('after-text');
 const errorMessage = document.getElementById('error-message');
+const button = document.getElementById('button');
 
 function comparePassword(){
     if(password.value === confPassword.value){
@@ -32,8 +33,11 @@ inputFields.forEach(function(inputField) {
   inputField.addEventListener('invalid', function(event) {
     event.preventDefault();
     inputField.classList.add('error');
+    inputField.classList.add('shake');
+    
     errorMessage.classList.add('required-text');
   });
+
 });
 
 
@@ -43,6 +47,7 @@ inputFields.forEach(function(inputField){
             return;
         }else{
         inputField.classList.remove('error');
+        inputField.classList.remove('shake');
         }
     });
 });

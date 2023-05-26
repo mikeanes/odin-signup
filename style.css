@@ -75,6 +75,7 @@ input:focus{
 .error{
     outline: none;
     border: 1.5px solid red;
+    
 }
 .error:focus{
     border: 1.5px solid red;
@@ -149,4 +150,13 @@ img{
 }
 .required-text::after{
     content: "*Please fill out the required boxes in red";
+}
+
+@keyframes shake {
+    25% {transform: translateX(4px)}
+    50% {transform: translateX(-4px)}
+    75% {transform: translateX(4px)}
+  }
+.shake{
+    animation: shake 0.2s ease-in-out 0s 2;
 }
