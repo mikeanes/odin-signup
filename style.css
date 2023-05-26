@@ -5,12 +5,10 @@ body{
     padding: 0;
     margin: 0;
     display: flex;
-    
 }
 
 .logo-section{
     background-image: url(images/background_asafyrov_unsplash.jpg);
-    /*width: 30vw;*/
     flex: 1;
     min-height: 100vh;
     background-position: 60%;
@@ -18,14 +16,17 @@ body{
     background-size: cover;
     display: flex;
     flex-direction: column;
-    
+    justify-content: space-between;
 }
-
+.logo-section>p{
+    color: rgba(255, 255, 255, 0.523);
+    padding: 0.3rem;
+    align-self: center;
+}
 
 .form-section{
     display: flex;
     flex-direction: column;
-    /*width: 70vw;*/
     flex: 2;
     justify-content: start;
     background-color: rgba(235, 228, 228, 0.421);
@@ -124,8 +125,9 @@ button:active{
 header{
     padding: 2.5rem;
 }
-header>p{
+header>div{
     font-size: 1.4rem;
+    width: 80%;
 }
 header>:nth-child(2){
     margin-bottom: 0;
@@ -139,7 +141,7 @@ header>:nth-child(2){
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 4.4rem;
+    margin-top: 4rem;
     font-family: "Norse", serif;
     color: white;
     padding-top: 1rem;
@@ -186,8 +188,8 @@ img{
     .logo-strip{
         margin-top: 0;
     }
-    header>p{
-        font-size: 1rem;
+    header>div{
+        width: 100%;
     }
     .form-row{
         width: 100%;
@@ -197,5 +199,11 @@ img{
         justify-content: center;
         align-items: center;
         flex-direction: column;
+    }
+    .logo-strip>span{
+        font-size: 20vw;
+    }
+    .logo-section>p{
+        display: none;
     }
   }

@@ -1,34 +1,30 @@
+//Element variables
 const password = document.getElementById('password');
 const confPassword = document.getElementById('conf-password');
 const afterText = document.getElementById('after-text');
 const errorMessage = document.getElementById('error-message');
 const button = document.getElementById('button');
 
+//Password validity checks
 function comparePassword(){
     if(password.value === confPassword.value){
         afterText.classList.remove("after-text");
         password.classList.remove("error");
         confPassword.classList.remove("error");
-
         password.setCustomValidity("");
     }else{
         afterText.classList.add("after-text");
         password.classList.add("error");
         confPassword.classList.add("error");
-        
         password.setCustomValidity("Passwords don't match");
     }
 }
-
 password.addEventListener("input", comparePassword);
 confPassword.addEventListener("input", comparePassword);
 
 
-
-
 //To check if input fields are invalid and then change border to red
 const inputFields = document.querySelectorAll('input');
-
 
 inputFields.forEach(function(inputField) {
   inputField.addEventListener('invalid', function(event) {
@@ -40,9 +36,7 @@ inputFields.forEach(function(inputField) {
       inputField.classList.remove('shake');
     },300)
   });
-
 });
-
 
 inputFields.forEach(function(inputField){
     inputField.addEventListener('input', function(){
@@ -55,23 +49,20 @@ inputFields.forEach(function(inputField){
     });
 });
 
-
-
-function checkFormValidity() {
-    const inputs = document.querySelectorAll('input[required]');
-  
-    for (let i = 0; i < inputs.length; i++) {
-      if (inputs[i].classList.contains('error')) {
-        return; // Return early if any input has the error class
-      }
-    }
-  
-    errorMessage.classList.remove('required-text');
-  }
-  
   // Attach input event listener to each input field
+  // and remove red border on new input 
   const inputs = document.querySelectorAll('input[required]');
   inputs.forEach(function(input) {
     input.addEventListener('input', checkFormValidity);
   });
+
+  function checkFormValidity() {
+    const inputs = document.querySelectorAll('input[required]');
+    for (let i = 0; i < inputs.length; i++) {
+      if (inputs[i].classList.contains('error')) {
+        return;
+      }
+    }
+    errorMessage.classList.remove('required-text');
+  }
   
