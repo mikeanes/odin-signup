@@ -170,7 +170,7 @@ img{
 .shake{
     animation: shake 0.2s ease-in-out 0s 2;
 }
-@media (max-width: 795px) {
+@media (max-width: 835px) {
     entry {
       min-width: 100%;
     }
@@ -189,10 +189,13 @@ img{
     header>p{
         font-size: 1rem;
     }
-  }
-
-@media (max-width: 450px){
     .form-row{
         width: 100%;
     }
-}
+    .account{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+  }
