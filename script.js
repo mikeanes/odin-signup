@@ -29,13 +29,16 @@ confPassword.addEventListener("input", comparePassword);
 //To check if input fields are invalid and then change border to red
 const inputFields = document.querySelectorAll('input');
 
+
 inputFields.forEach(function(inputField) {
   inputField.addEventListener('invalid', function(event) {
     event.preventDefault();
     inputField.classList.add('error');
     inputField.classList.add('shake');
-    
     errorMessage.classList.add('required-text');
+    setTimeout(function(){
+      inputField.classList.remove('shake');
+    },300)
   });
 
 });

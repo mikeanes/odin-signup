@@ -7,9 +7,11 @@ body{
     display: flex;
     
 }
+
 .logo-section{
     background-image: url(images/background_asafyrov_unsplash.jpg);
-    width: 30vw;
+    /*width: 30vw;*/
+    flex: 1;
     min-height: 100vh;
     background-position: 60%;
     background-repeat:no-repeat;
@@ -18,14 +20,18 @@ body{
     flex-direction: column;
     
 }
+
+
 .form-section{
     display: flex;
     flex-direction: column;
-    width: 70vw;
+    /*width: 70vw;*/
+    flex: 2;
     justify-content: start;
     background-color: rgba(235, 228, 228, 0.421);
     box-shadow: 0px 3px 4px rgba(0,0,0,0.2);
 }
+
 .signup-form{
     background-color:  rgb(255, 255, 255);
     box-shadow: 0px 3px 4px rgba(0,0,0,0.2);
@@ -54,17 +60,21 @@ body{
     justify-content: space-between;
     width: 65%;
     flex-wrap: wrap;
+    gap: 18px;
 }
 
 entry{
    display: flex;
    flex-direction: column; 
-   width: 230px;
+   min-width: 45%;
 }
+
+
 input{
     height: 1.4rem;
     border-radius: 5px;
     border: 1.5px solid rgba(128, 128, 128, 0.452);
+
 }
 
 input:focus{
@@ -159,4 +169,30 @@ img{
   }
 .shake{
     animation: shake 0.2s ease-in-out 0s 2;
+}
+@media (max-width: 795px) {
+    entry {
+      min-width: 100%;
+    }
+}
+
+@media (max-width: 590px) {
+    body {
+      flex-direction: column;
+    }
+    .logo-section {
+      min-height: 100px;
+    }
+    .logo-strip{
+        margin-top: 0;
+    }
+    header>p{
+        font-size: 1rem;
+    }
+  }
+
+@media (max-width: 450px){
+    .form-row{
+        width: 100%;
+    }
 }
